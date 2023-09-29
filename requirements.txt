@@ -113,3 +113,7 @@ webcolors==1.13
 webencodings==0.5.1
 websocket-client==1.6.3
 widgetsnbextension==4.0.9
+Flask==2.3.3
+Flask-RESTful==0.3.10
+redis==5.0.0
+celery==5.3.4
