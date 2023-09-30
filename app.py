@@ -30,7 +30,8 @@ class VistaDetector(Resource):
         df = pd.DataFrame(request_mapped, index=[0])
         intrusion = model.predict(df)
         if intrusion[0] == -1:
-            args = {'request': request.json, 'intrusion': request.json["info"]}
+            datos = {'request': request.json, 'intrusion': request.json["info"]}
+            args = (datos,)
             enviar_alerta.apply_async(args)
 
 api.add_resource(VistaDetector, '/api/detector-intrusos')
